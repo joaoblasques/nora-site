@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Capabilities from '../components/Capabilities.astro';
+import Trust from '../components/Trust.astro';
+import VideoSlot from '../components/VideoSlot.astro';
+import ClosingCta from '../components/ClosingCta.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base title="Nora Bennett — your AI executive assistant" description="She drafts. You send. She acts only on your OK. Join the early-access waitlist.">
+  <a id="top"></a>
+  <Nav />
+  <main>
+    <Hero />
+    <HowItWorks />
+    <Capabilities />
+    <Trust />
+    <section id="demo" class="mx-auto max-w-[1100px] px-6 py-20">
+      <h2 class="font-[var(--font-display)] text-4xl">See Nora in action</h2>
+      <VideoSlot />
+    </section>
+    <ClosingCta />
+  </main>
+  <Footer />
+</Base>

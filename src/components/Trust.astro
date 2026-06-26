@@ -1,0 +1,20 @@
+---
+const points = [
+  { t: 'Never as you', d: 'Nora never sends from or as your address. The only mail she originates is from her own labeled assistant identity — after your explicit approval.' },
+  { t: 'You stay in control', d: 'Your drafts are always yours to send. Nothing reaches anyone without your go-ahead.' },
+  { t: 'Keep it local', d: 'Mark a message keep-local and it is processed on an on-device model — its content never leaves the boundary.' },
+];
+---
+<section id="trust" class="bg-[var(--color-deepink)] text-white">
+  <div class="mx-auto max-w-[1100px] px-6 py-24">
+    <h2 class="font-[var(--font-display)] text-4xl">Why you can trust her</h2>
+    <div class="mt-10 grid gap-10 md:grid-cols-3">
+      {points.map((p) => (
+        <div>
+          <h3 class="text-xl font-semibold text-[var(--color-clay)]">{p.t}</h3>
+          <p class="mt-2 text-white/75">{p.d}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

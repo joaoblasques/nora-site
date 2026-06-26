@@ -1,0 +1,19 @@
+---
+const steps = [
+  { n: '1', t: 'Forward a thread', d: 'Send any email thread to your private Nora address — add a short code or just plain English.' },
+  { n: '2', t: 'Nora drafts to you', d: 'Within seconds she replies to you with a clean, copy-ready draft: a reply, summary, analysis, or report.' },
+  { n: '3', t: 'You send', d: 'Review it and send it yourself. Nora never sends your drafts, and never sends as you.' },
+];
+---
+<section id="how" class="mx-auto max-w-[1100px] px-6 py-20">
+  <h2 class="font-[var(--font-display)] text-4xl">How it works</h2>
+  <div class="mt-10 grid gap-8 md:grid-cols-3">
+    {steps.map((s) => (
+      <div>
+        <div class="h-10 w-10 grid place-items-center rounded-full bg-[var(--color-approve)] text-white font-[var(--font-display)]">{s.n}</div>
+        <h3 class="mt-4 text-xl font-semibold">{s.t}</h3>
+        <p class="mt-2 text-ink/75">{s.d}</p>
+      </div>
+    ))}
+  </div>
+</section>

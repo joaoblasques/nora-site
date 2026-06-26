@@ -1,0 +1,36 @@
+---
+import { createDemoSequence } from '../lib/demoSequence';
+const { steps } = createDemoSequence();
+---
+<div id="hero-demo" class="rounded-2xl border border-black/10 bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)] p-5">
+  <ol class="space-y-3">
+    {steps.map((s, i) => (
+      <li data-step={i} class="flex items-start gap-3 opacity-30 transition-opacity duration-500">
+        <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-approve)]"></span>
+        <span class="text-sm">{s.label}</span>
+      </li>
+    ))}
+  </ol>
+</div>
+<script>
+  import { createDemoSequence } from '../lib/demoSequence';
+  const root = document.getElementById('hero-demo');
+  if (root) {
+    const items = Array.from(root.querySelectorAll('[data-step]'));
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const { next } = createDemoSequence();
+    if (reduce) {
+      items.forEach((el) => el.classList.replace('opacity-30', 'opacity-100'));
+    } else {
+      let i = 0;
+      const tick = () => {
+        items.forEach((el, idx) => el.classList.toggle('opacity-100', idx <= i));
+        items.forEach((el, idx) => el.classList.toggle('opacity-30', idx > i));
+        i = next(i);
+        if (i === 0) setTimeout(() => items.forEach((el) => el.classList.replace('opacity-100', 'opacity-30')), 600);
+      };
+      tick();
+      setInterval(tick, 1600);
+    }
+  }
+</script>

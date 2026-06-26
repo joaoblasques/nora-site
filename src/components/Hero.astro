@@ -1,0 +1,19 @@
+---
+import HeroDemo from './HeroDemo.astro';
+import VideoSlot from './VideoSlot.astro';
+---
+<section class="mx-auto max-w-[1100px] px-6 pt-16 pb-12 md:grid md:grid-cols-2 md:gap-12 md:items-center">
+  <div>
+    <p class="text-sm font-medium uppercase tracking-wide text-[var(--color-approve)]">AI executive assistant</p>
+    <h1 class="mt-3 font-[var(--font-display)] text-5xl md:text-6xl leading-[1.05]">She drafts.<br/>You send.<br/><span class="text-[var(--color-approve)]">She acts only on your OK.</span></h1>
+    <p class="mt-6 text-lg text-ink/75 max-w-md">Nora lives in your inbox. Forward a thread; she replies to <em>you</em> with a copy-ready draft. She only ever sends, schedules, or shares after you approve — and always from her own labeled identity, never as you.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#waitlist" class="rounded-full bg-[var(--color-approve)] text-white px-6 py-3 font-medium hover:opacity-90">Join the early-access waitlist</a>
+      <a href="#demo" class="rounded-full border border-black/15 px-6 py-3 font-medium hover:border-[var(--color-approve)]">See how it works</a>
+    </div>
+  </div>
+  <div class="mt-12 md:mt-0">
+    <HeroDemo />
+    <VideoSlot />
+  </div>
+</section>
