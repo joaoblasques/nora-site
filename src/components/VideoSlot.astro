@@ -1,7 +1,7 @@
 ---
-// Self-hosted silent walkthrough of the two showcase beats (find-a-file + summarize,
-// then reply → propose → approve → book/invite → file a brief). Silent by design, so
-// it autoplays muted + loops inline; controls let visitors replay or scrub.
+// Self-hosted narrated walkthrough of the two showcase beats (find-a-file + summarize,
+// then reply → propose → approve → book/invite → file a brief), in Nora's own voice.
+// Narrated → click-to-play with sound (no autoplay/mute/loop); poster + controls.
 const src = `${import.meta.env.BASE_URL}nora-demo.mp4`;
 const poster = `${import.meta.env.BASE_URL}nora-demo-poster.jpg`;
 ---
@@ -11,18 +11,15 @@ const poster = `${import.meta.env.BASE_URL}nora-demo-poster.jpg`;
       class="absolute inset-0 h-full w-full object-cover"
       src={src}
       poster={poster}
-      autoplay
-      muted
-      loop
+      controls
       playsinline
       preload="metadata"
-      controls
-      aria-label="Nora demo — she finds a file and summarizes it, then drafts a reply, proposes a meeting, and only books and files it after you approve."
+      aria-label="Nora demo, narrated — she finds a file and summarizes it, then drafts a reply, proposes a meeting, and only books and files it after you approve."
     ></video>
   </div>
   <p class="mt-3 text-sm text-ink/60">
-    A ~60-second silent walkthrough: Nora finds the right file and summarizes it, then drafts a
-    reply, proposes the meeting, and only books, invites, and files the brief <em>after you approve</em> —
-    always from her own identity, never as you.
+    A ~60-second walkthrough, narrated by Nora: she finds the right file and summarizes it, then
+    drafts a reply, proposes the meeting, and only books, invites, and files the brief
+    <em>after you approve</em> — always from her own identity, never as you. <span class="text-ink/45">Tap to play with sound.</span>
   </p>
 </div>
